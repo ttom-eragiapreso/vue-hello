@@ -12,7 +12,14 @@
 <body>
   
 <div id="app">
-  <h1>{{messaggio}}</h1>
+  <button @click="testoRosso = 'red'">Fai diventare il testo rosso</button>
+  <h1 :class="testoRosso">{{messaggio}}</h1>
+  <hr>
+  <div class="img-container">
+    <img :src="imgTag + listaImg[counter]" alt="">
+    <p>Un carousel in 2 righe.. pazzesco</p>
+  </div>
+  <button @click="iterateImg(0)">Itera tra le immagini</button>
 </div>
 
 

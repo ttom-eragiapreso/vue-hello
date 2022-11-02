@@ -13,12 +13,21 @@ createApp({
 
 data(){
   return {
-    messaggio: "Ciao Vue"
+    messaggio: "Ciao Vue",
+    testoRosso: "",
+    listaImg: ["male1.png", "male2.png", "male3.png", "female1.png", "female2.png", "female3.png"],
+    counter: 0,
+    imgTag: "./img/"
+  }
+},
 
+methods:{
+
+  iterateImg(){
+    this.counter < this.listaImg.length -1 ? this.counter++ : this.counter = 0;
+    console.log(this.counter, this.listaImg.length)
   }
 }
-
-
 
 
 }).mount("#app")
