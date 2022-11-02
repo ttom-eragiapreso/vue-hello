@@ -16,10 +16,13 @@
   <h1 :class="testoRosso">{{messaggio}}</h1>
   <hr>
   <div class="img-container">
-    <img :src="imgTag + listaImg[counter]" alt="">
+    <img :src="imgTag + listaImg[counter]" alt="" v-show="toggleImgText">
     <p>Un carousel in 2 righe.. pazzesco</p>
   </div>
-  <button @click="iterateImg(0)">Itera tra le immagini</button>
+  <button @click="iterateImg()">Itera tra le immagini</button>
+  <hr>
+  <button @click="toggleBtn">Toggle tra immagine e testo</button>
+  <p v-show="!toggleImgText">Questo testo lo vedrai solo cliccando un bottone</p>
 </div>
 
 
